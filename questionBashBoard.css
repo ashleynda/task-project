@@ -1,0 +1,46 @@
+body {
+    background-color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.question_and_answertag {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 500px;
+    margin: 0;
+}
+
+.answer_container {
+    display: table;
+    gap: 30px;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+p {
+    font-size: 40px;
+    font-weight: bold;
+    
+  }
+
+.pick {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 0;
+}
+
+label {
+    display: table-cell;
+    margin-right: 10px;
+}
+
+button {
+    margin-top: 20px;
+}
+
