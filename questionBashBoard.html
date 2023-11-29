@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./questionBashBoard.css">
+</head>
+<body>
+    <div class="question_and_answertag">
+      
+        <form id="option">
+            <div class="answer_container">
+                <div>
+                    <p class="question" id="question">Are you male or female?</p>
+                </div>
+                
+                <div class="pick" id="group1">
+                    <label>
+                        <input type="radio" name="gender" value="male">
+                        Male
+                    </label>
+                    
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        Female
+                    </label>
+                </div>
+                <div class="pick" id="group2">
+                    <label>
+                        <input type="radio" name="gender" value="other">
+                        Other
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="unknown">
+                        Unknown
+                    </label>
+                </div>
+            </div>
+            <button class="next" id="nextButton">Next</button>
+        </form>
+    </div>
+    <script src="./questionBashBoard.js"></script>
+</body>
+</html>

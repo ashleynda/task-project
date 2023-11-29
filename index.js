@@ -20,7 +20,3 @@ form.addEventListener('submit', (event) => {
   window.location = './dashboard.html'
 })
 
-
-
-
-
