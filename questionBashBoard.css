@@ -1,14 +1,6 @@
-body {
-    background-color: #fff;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
 .question_and_answertag {
-    display: flex;
+    display: none;
     flex-direction: column;
     text-align: center;
     width: 500px;
@@ -22,7 +14,7 @@ body {
     margin-left: 40px;
 }
 
-p {
+.question {
     font-size: 40px;
     font-weight: bold;
     
@@ -30,6 +22,7 @@ p {
 
 .pick {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 30px;
     margin: 0;

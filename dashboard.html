@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="questionBashBoard.css">
     <title>Document</title>
+
 </head>
 <body>
     <section class="main-section">
@@ -14,16 +16,16 @@
             <select id="category">
                 <option selected>Select a Category</option>
                 <option>General Knowledge</option>
-                <option>Entertainment:Books</option>
-                <option>Entertainment:Film</option>
-                <option>Entertainment:Music</option>
-                <option>Entertainment:Musicals & Theatres</option>
-                <option>SEntertainment:Television</option>
-                <option>Entertainment:Video Games</option>
-                <option>Entertainment:Board Games</option>
+                <option>Entertainment: Books</option>
+                <option>Entertainment: Film</option>
+                <option>Entertainment: Music</option>
+                <option>Entertainment: Musicals & Theatres</option>
+                <option>SEntertainment: Television</option>
+                <option>Entertainment: Video Games</option>
+                <option>Entertainment: Board Games</option>
                 <option>Science & Nature</option>
-                <option>Science:Computers</option>                 
-                <option>Science:Mathematics</option> 
+                <option>Science: Computers</option>                 
+                <option>Science: Mathematics</option> 
                 <option>Mythology</option>            
                 <option>Sports</option> 
                 <option>Geography</option> 
@@ -33,10 +35,10 @@
                 <option>Celebrities</option> 
                 <option>Animals</option> 
                 <option>Vehicles</option> 
-                <option>Entertainment:Comics</option> 
-                <option>Science:Gadgets</option> 
-                <option>Entertainment:Japanese Anime % Magna</option>
-                <option>Entertainment:Cartoon & Animations</option>  
+                <option>Entertainment: Comics</option> 
+                <option>Science: Gadgets</option> 
+                <option>Entertainment: Japanese Anime % Magna</option>
+                <option>Entertainment: Cartoon & Animations</option>  
             </select>
         </div>
 
@@ -52,6 +54,41 @@
         
         <button class="start" id="start-quiz">Start Quiz</button> 
     </section>
+
+    <div class="question_and_answertag" id="question_and_answertag">
+      
+        <form id="option">
+            <div class="answer_container">
+                <div>
+                    <p class="question" id="question">Are you male or female?</p>
+                </div>
+                
+                <div class="pick" id="group1">
+                    <label>
+                        <input type="radio" name="gender" value="male">
+                        Male
+                    </label>
+                    
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        Female
+                    </label>
+                
+                    <label>
+                        <input type="radio" name="gender" value="other">
+                        Other
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="unknown">
+                        Unknown
+                    </label>
+                </div>
+            </div>
+
+            <div id="correct-answer"></div>
+            <button class="next" id="nextButton">Next Question</button>
+        </form>
+    </div>
     
     <script src="./dashboard.js"></script>
 </body>
