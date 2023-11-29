@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div id="header">
+    </div>
     <div>
-        This is the beginning
-        this is the second entry
-        this is the third entry
-        this is the fourth entry
+        <form class="details" id="form">
+            <h1 class="text"> User Details</h1>
+            <input type="text" placeholder="Enter FirstName" id="firstname" required>
+            <input type="text" placeholder="Enter LastName" id="lastname" required>
+            <input type="email" placeholder="Enter your preferred email " id="username" required>
+            <input type="password" placeholder="Enter your password " id="password" required>
+            <input type="number" placeholder="Enter your phone-number" id="number">
+
+            <button class="button">Get Started</button>
+
+
+        </form>
     </div>
 </body>
 </html>
