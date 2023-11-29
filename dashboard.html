@@ -8,10 +8,11 @@
 </head>
 <body>
     <section class="main-section">
-        <h1 class="second-page">DashBoard <span>Hi, User</span></h1>
+        <h1 class="second-page">Hi, <span id="userFullName">User</span></h1>
+        <p>Select the Category and Difficulty Level</p>
         <div class="cate">
             <select id="category">
-                <option>Select Category</option>
+                <option selected>Select a Category</option>
                 <option>Music</option>
                 <option>Sport and Leisure</option>
                 <option>Film and Tv</option>
@@ -25,9 +26,9 @@
             </select>
         </div>
 
-        <div class="level">
-            <select class="difficulty">
-                <option>Difficulty Level</option>
+        <div class="level" >
+            <select class="difficulty" id="level">
+                <option selected>Difficulty Level</option>
                 <option>Easy</option>
                 <option>Medium</option>
                 <option>Hard</option>
@@ -35,8 +36,9 @@
     
         </div>
         
-        <button class="start">Start Quiz</button> 
+        <button class="start" id="start-quiz">Start Quiz</button> 
     </section>
     
+    <script src="./dashboard.js"></script>
 </body>
 </html>
