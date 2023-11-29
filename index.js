@@ -8,7 +8,7 @@ let password = document.getElementById("password");
 
 let fullName = firstName.value + lastName.value;
 console.log(fullName);
-let userFullName = localStorage.setItem("userFullName", );
+let userFullName = localStorage.setItem("userFullName", fullName);
 let userPhoneNumber = sessionStorage.setItem("userPhoneNumber", phoneNumber);
 let userEmail = sessionStorage.setItem("userEmail", email);
 
