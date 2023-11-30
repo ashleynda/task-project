@@ -130,7 +130,6 @@ function getRouteNumber(){
     displayQuestion();
   }
 
-
 }
 
 
@@ -140,7 +139,6 @@ function displayQuestion(){
   questionOptions();
 
 }
-
 document.getElementById("nextButton").addEventListener('click', () => {
 
   event.preventDefault();
