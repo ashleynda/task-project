@@ -134,8 +134,7 @@ function displayQuestion(allQuestions){
     localStorage.setItem(index, JSON.stringify(allQuestions.results[index]))
     
     // currentQuestion = allQuestions.results[index];
-  
-    // document.getElementById("question").innerHTML = currentQuestion.question;
+    
 
   }
 
