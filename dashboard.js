@@ -1,8 +1,14 @@
-document.getElementById("userFullName").innerHTML = localStorage.getItem("userFullName");
+document.getElementById("user-full-name").innerHTML = localStorage.getItem("userFullName");
 let difficultyLevel =" ";
 let category = " ";
 let routeNumber = 0;
 let allQuestions = {};
+let index = 0;
+let question = "";
+let eachResult = "";
+let userAnswers = 0;
+let allAnsweredQuestion = 0;
+
 
 
 let startButton = document.querySelector('#start-quiz');
@@ -16,7 +22,6 @@ startButton.addEventListener('click', () => {
   console.log("get Question got called...");
   getRouteNumber();
   getQuestions();
-  // displayQuestion(allQuestions);
 
 })
 
@@ -114,33 +119,111 @@ function getRouteNumber(){
   caller.onload = function(){
     allQuestions = JSON.parse(caller.response);
 
-    document.querySelector(".main-section").style.display = 'none';
-  
-    document.querySelector("#question_and_answertag").style.display = 'flex';
-    
-    displayQuestion(allQuestions);
-  }
 
+    console.log(allQuestions);
+    localStorage.setItem("AllQuestion", JSON.stringify(allQuestions));
+    console.log("Done saving");
+
+    document.querySelector("#main-section").style.display = 'none';
+    document.querySelector("#question_and_answertag").style.display = 'flex'; 
+
+    displayQuestion();
+  }
 
 }
 
-let index = 0;
 
-function displayQuestion(allQuestions){
+function displayQuestion(){
 
-  console.log(allQuestions.results)
+  question = localStorage.getItem("AllQuestion");
+  questionOptions();
 
-  while (index !== 20){
-    localStorage.setItem(index, JSON.stringify(allQuestions.results[index]))
-    
-    // currentQuestion = allQuestions.results[index];
-    
-
-  }
-
-  
 }
+document.getElementById("nextButton").addEventListener('click', () => {
 
-document.getElementById('nextButton').addEventListener('click', () => {
+  event.preventDefault();
+
+  displayCorrectAnswer();
+
   index++;
+  setTimeout(questionOptions, 2000);
+
+})
+
+
+function questionOptions(){
+  getAnswer();
+  uncheckRadio();
+  shuffleOptions();
+  
+
+  document.getElementById('correct-answer').innerHTML = "";
+  eachResult =JSON.parse(question).results[index];
+
+  document.getElementById('question').innerHTML = eachResult.question;
+
+  let optionA = eachResult.correct_answer;
+  let optionB = eachResult.incorrect_answers[0];
+  let optionC = eachResult.incorrect_answers[1];
+  let optionD = eachResult.incorrect_answers[2];
+
+
+  document.getElementById('optionA').innerHTML = optionA;
+  document.getElementById('optionB').innerHTML = optionB;
+  document.getElementById('optionC').innerHTML = optionC;
+  document.getElementById('optionD').innerHTML = optionD;
+}
+
+function displayCorrectAnswer(){
+  document.getElementById('correct-answer').innerHTML = `Correct Answer is ${eachResult.correct_answer}`;
+}
+
+
+function shuffleOptions(){
+  let ul = document.querySelector('ul');
+  for (let option = ul.children.length; option >= 0; option--) {
+      ul.appendChild(ul.children[Math.random() * option | 0]);
+  }
+}
+
+function uncheckRadio(){
+  document.getElementById("radio-input1").checked = false;
+  document.getElementById("radio-input2").checked = false;
+  document.getElementById("radio-input3").checked = false;
+  document.getElementById("radio-input4").checked = false;
+}
+
+function getAnswer(){
+  allAnsweredQuestion++;
+
+  if(allAnsweredQuestion === 20){
+    displayResult();
+  }
+  if(document.getElementById("radio-input1").checked === true){
+    console.log("correct");
+    userAnswers++;
+  }
+}
+
+
+let displayResult = function() {
+
+  document.querySelector("#question_and_answertag").style.display = 'none';
+
+  document.querySelector("#user-result").style.display = 'flex';
+  let userResult = `You Scored ${userAnswers}`;
+  document.querySelector("#user-answers").innerHTML= userResult;
+
+  let percentage = (userAnswers/20) * 100;
+  let percentageTag = document.querySelector("#percentage");
+  percentageTag.innerHTML= percentage.toPrecision(2) + "%";
+
+  if(percentage < 50){
+    percentageTag.style.color = 'red';
+  }
+
+}
+
+document.querySelector('#try-again').addEventListener('click', () => {
+  location.reload();
 })
