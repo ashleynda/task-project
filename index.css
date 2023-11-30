@@ -2,51 +2,57 @@ body {
     background-color: antiquewhite;
     display: flex;
     justify-content: center;
+    padding: 10%;
 }
 .details{
     display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 15px;
     flex-direction: column;
+    align-self: stretch;
 }
-input{
-    border-radius: 10px;
-    /* border: 10px solid #ccc; */
-    width: 150%;
+.details > input{
+    border-radius: 6px;
+    width: 100%;
     box-sizing: border-box;
     align-items: center;
     font-size: 15px;
     margin-bottom: 10px;
-    height: 40px;
+    height: 45px;
     
   }
 
 .button{
-    background-color: rgb(245, 236, 225);
+    background-color: rgb(233, 217, 197);
     border: none;
     padding: 0px 30px;
     border-radius: 5px;
     cursor: pointer;
     height: 30px;
     font-size: 15px;
-    width: 150%;
+    width: 100%;
 
   }
 
 .button:hover{
-    background-color:  #4CAF50;
+    background-color:  grey;
     color: aliceblue;
+    font-size: 20px;
 }
 
 .main{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-top: 250px;
+  padding: 50px;
+
 }
 
 .text{
-  display: block;
-  
+  display: flex;
+  flex-direction: column;
+}
+
+.text > span{
+  color: grey;
+  font-size: 35px;
+  margin-top: 30px;
+
 }

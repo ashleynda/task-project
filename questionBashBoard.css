@@ -1,39 +1,101 @@
-
-.question_and_answertag {
+body{
+ background-color:whitesmoke;
+}
+#question_and_answertag {
     display: none;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    text-align: center;
-    width: 500px;
-    margin: 0;
+    padding: 30px 50px
 }
 
 .answer_container {
-    display: table;
+    display: flex;
+    flex-direction: column;
     gap: 30px;
-    margin-top: 40px;
-    margin-left: 40px;
+    border-color: black;
+    justify-content: center;
+    
+
 }
 
 .question {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
-    
-  }
+    align-self: stretch;
+    margin: 0px;
+}
 
 .pick {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 30px;
-    margin: 0;
 }
 
 label {
     display: table-cell;
-    margin-right: 10px;
 }
 
-button {
-    margin-top: 20px;
+#nextButton, #try-again {
+    display: flex;
+    margin-top: 30px;
+    height: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT';
+    width: 200px;
+    font-size: 25px;
+    border-radius: 8px;
+    align-self: center;
+    border: none;
+    background-color: green;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
 }
+
+#nextButton:hover, #try-again:hover {
+    font-size: 30px;
+    width: 300px;
+}
+
+.answer_display{
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+
+.pick > label{
+    display: flex;
+    gap: 10px;
+}
+
+.pick > label > p {
+    font-size: 20px;
+}
+
+#user-result{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#user-result > p, #user-result > h1 {
+ margin: 0px;
+}
+
+#percentage{
+    display: flex;
+    font-size: 200px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+    color: green;
+    margin: 0px;
+}
+
+#option{
+    display: flex;
+    flex-direction: column;
+}
+
+
 
