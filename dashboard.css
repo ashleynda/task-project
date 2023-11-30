@@ -1,38 +1,45 @@
 body {
     background-color: white;
+    padding: 13%;
 }
 .main-section {
-    padding: 10px 20px;
-    margin-top: 230px;
+    padding: 20px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     
 }
+
 .second-page {
     font-size: 35px;
     font-weight: 800;
     font-style: oblique;
 }
-.second-page span {
-    color: blue;
+
+#user-full-name {
+    color: rgb(39, 39, 179);
 }
+
 #category {
     margin-bottom: 20px;
-    border-radius: 4px;
-    width: 300px;
-    height: 25px;    
+    border-radius: 5px;
+    width: 500px;
+    height: 40px;
+    font-size: 20px;    
 }
+
 .difficulty {
-    width: 300px;
-    height: 25px;
-    border-radius: 4px;
+    width: 500px;
+    height: 40px;
+    font-size: 20px; 
+    border-radius: 5px;
 }
+
 .start {
-    background-color: blue;
+    background-color: rgb(39, 39, 179);
     border-radius: 4px;
-    width: 150px;
+    width: 180px;
     margin-top: 30px;
     font-size: 20px;
     height: 40px;
@@ -44,7 +51,7 @@ body {
 
 .start:hover {
     background-color: rgba(47, 47, 220, 0.903);
-    font-size: 25px;
+    font-size: 30px;
 }
 
 

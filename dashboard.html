@@ -9,9 +9,9 @@
 
 </head>
 <body>
-    <section class="main-section">
-        <h1 class="second-page">Hi, <span id="userFullName">User</span></h1>
-        <p>Select the Category and Difficulty Level</p>
+    <section class="main-section" id="main-section">
+        <h1 class="second-page">Hi, <span id="user-full-name">User</span></h1>
+        <p>Select a Category and Difficulty Level</p>
         <div class="cate">
             <select id="category">
                 <option selected>Select a Category</option>
@@ -55,41 +55,57 @@
         <button class="start" id="start-quiz">Start Quiz</button> 
     </section>
 
-    <div class="question_and_answertag" id="question_and_answertag">
+    <div id="question_and_answertag">
       
         <form id="option">
             <div class="answer_container">
-                <div>
+                <div class="answer_display">
                     <p class="question" id="question">Are you male or female?</p>
                 </div>
                 
-                <div class="pick" id="group1">
-                    <label>
-                        <input type="radio" name="gender" value="male">
-                        Male
+                <ul class="pick" id="group1">
+                    <label id="">
+                        <input type="radio" name="gender" value="#optionA" id="radio-input1">
+                        <p id="optionA">Male</p>
+                        
                     </label>
                     
-                    <label>
-                        <input type="radio" name="gender" value="female">
-                        Female
+                    <label id="">
+                        <input type="radio" name="gender" value="#optionB" id="radio-input2">
+                        <p id="optionB">Female</p>
+                        
                     </label>
                 
-                    <label>
-                        <input type="radio" name="gender" value="other">
-                        Other
+                    <label id="">
+                        <input type="radio" name="gender" value="#optionC" id="radio-input3">
+                        <p id="optionC">Other</p>
+                        
                     </label>
-                    <label>
-                        <input type="radio" name="gender" value="unknown">
-                        Unknown
+                    <label id="">
+                        <input type="radio" name="gender" value="#optionD" id="radio-input4">
+                        <p id="optionD">Unknown</p>
+                        
                     </label>
-                </div>
+                </ul>
             </div>
 
             <div id="correct-answer"></div>
             <button class="next" id="nextButton">Next Question</button>
         </form>
     </div>
+
+    <div id="user-result">
+        <h1 class="user-answers" id="user-answers"></h1>
+        <p>Out of 20 Questions</p>
+
+        <h4>Your percentage is </h4>
+        <h1 class="percentage" id="percentage"></h1>
+
+        <button class="try-again" id="try-again">Try Again</button>
+    </div>
+
     
     <script src="./dashboard.js"></script>
+
 </body>
 </html>
