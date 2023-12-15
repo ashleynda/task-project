@@ -1,5 +1,5 @@
 document.getElementById("user-full-name").innerHTML = localStorage.getItem("userFullName");
-let difficultyLevel =" ";
+let difficultyLevel ="easy";
 let category = " ";
 let routeNumber = 9;
 let allQuestions = {};
