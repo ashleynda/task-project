@@ -56,3 +56,11 @@ body {
   margin-top: 30px;
 
 }
+
+@media screen and (max-width: 728px) {
+  
+  .main{
+    padding: 5px;
+    width: 100%;
+  }
+}

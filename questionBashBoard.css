@@ -97,5 +97,31 @@ label {
     flex-direction: column;
 }
 
+@media screen and (max-width: 728px) {
+
+    body{
+        padding-top: 70px;
+
+    }
+    
+    .question {
+        font-size: 25px;
+        margin-top: 40px;
+    }
+
+    #question_and_answertag {
+        padding: 0px;
+    }
+
+    #percentage{
+        font-size: 150px;
+    }
+
+    #user-result{
+        margin-top: 100px;
+    }
+
+}
+
 
 
